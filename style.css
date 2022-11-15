@@ -1,0 +1,43 @@
+/* Global View aka Desktop */
+
+/* removes white border */
+/* body{
+    margin: 0;
+} */
+
+.container{
+    background-color: pink;
+    min-height: 500px;
+    max-width: 1024px;
+    /* top and bottom = 0
+       left and right = auto */
+    margin: 0 auto;
+    /* apply flex to all children */
+    /* Inline and wrap onto next line */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col{
+    background-color: darkcyan;
+    min-height: 200px;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+
+/* Tablet View */
+@media (max-width: 768px){
+/* changing width from 30% to 45% */
+.col{
+    width: 45%;
+}
+}
+
+/* Mobile View */
+@media (max-width: 500px){
+    .col{
+        width: 100%;
+    } 
+}
