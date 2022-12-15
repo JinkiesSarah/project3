@@ -1,43 +1,40 @@
 /* Global View aka Desktop */
 
-/* removes white border */
-/* body{
-    margin: 0;
-} */
-
 .container{
-    background-color: pink;
+    background-color: rgb(184, 139, 227);
     min-height: 500px;
     max-width: 1024px;
-    /* top and bottom = 0
-       left and right = auto */
+    /* center container */
     margin: 0 auto;
-    /* apply flex to all children */
-    /* Inline and wrap onto next line */
+    /* converting .col into flexbox */
     display: flex;
+    /* .col into multi-lines */
     flex-wrap: wrap;
+    /* .col evenly distributed */
     justify-content: space-between;
 }
 
 .col{
-    background-color: darkcyan;
+    background-color: pink;
     min-height: 200px;
     width: 30%;
+    /* space inbetween .cols */
     margin-bottom: 40px;
 }
 
-
 /* Tablet View */
 @media (max-width: 768px){
-/* changing width from 30% to 45% */
-.col{
-    width: 45%;
-}
+    /* 2 .col on a row */
+    .col{
+        width: 45%;
+    }
+   
 }
 
 /* Mobile View */
-@media (max-width: 500px){
+@media (max-width: 400px){
+    /* 1 .col on a row */
     .col{
         width: 100%;
-    } 
+    }
 }
